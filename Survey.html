@@ -72,17 +72,17 @@
     const addSubmition =  (ev)=>{
       ev.preventDefault();// stops from submiting
       let submition = {
-        
-        companyName = document.getElementById('companyName').value,
-        firstName = document.getElementById('firstName').value,
-        lastName = document.getElementById('lastName').value,
-        phone = document.getElementById('phone').value,
-        email = document.getElementById('email').value,
-        Q1 = document.getElementById('Q1').value,
-        Q2 = document.getElementById('Q2').value,
-        Q3 = document.getElementById('Q3').value,
-        Q4 = document.getElementById('Q4').value,
-        Q5 = document.getElementById('Q5').value
+        id: Date.now,
+        companyName : document.getElementById('companyName').value,
+        firstName : document.getElementById('firstName').value,
+        lastName : document.getElementById('lastName').value,
+        phone : document.getElementById('phone').value,
+        email : document.getElementById('email').value,
+        Q1 : document.getElementById('Q1').value,
+        Q2 : document.getElementById('Q2').value,
+        Q3 : document.getElementById('Q3').value,
+        Q4 : document.getElementById('Q4').value,
+        Q5 : document.getElementById('Q5').value
         
       }
       submitions.push(submition);
