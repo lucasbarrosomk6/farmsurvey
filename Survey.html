@@ -63,6 +63,35 @@
                    
                     </textarea>
       </div>
+      <div>
+        <input class = "submitbutton" type="submit"></input>
+      </div>
     </form>
+    <script>
+    let submitions = []; //array for submitions
+    const addSubmition =  (ev)=>{
+      ev.preventDefault();// stops from submiting
+      let submition = {
+        id = submitions.length,
+        companyName = document.getElementById('companyName').value,
+        firstName = document.getElementById('firstName').value,
+        lastName = document.getElementById('lastName').value,
+        phone = document.getElementById('phone').value,
+        email = document.getElementById('email').value,
+        Q1 = document.getElementById('Q1').value,
+        Q2 = document.getElementById('Q2').value,
+        Q3 = document.getElementById('Q3').value,
+        Q4 = document.getElementById('Q4').value,
+        Q5 = document.getElementById('Q5').value
+        
+      }
+      submitions.push(submition);
+      document.forms[0].reset(); //clears the form for next entry
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=> {
+      document.getElementById('submitbutton').addEventListener('click', addSubmition);
+    })
+    </script>
   </body>
 </html>
